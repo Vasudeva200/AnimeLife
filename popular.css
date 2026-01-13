@@ -1,0 +1,193 @@
+/* ============================================================
+   1. GLOBAL & POPUP STYLES (Required for all pages)
+   ============================================================ */
+
+/* Navbar Link Active State */
+.nav-links a.active {
+    color: #f26b3a !important;
+    border-bottom: 2px solid #f26b3a;
+    font-weight: bold;
+}
+
+/* Account Dropdown Menu - Glassmorphism Style */
+.dropdown-menu {
+    display: none !important; 
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 280px;
+    background: rgba(221, 214, 214, 0.8) !important; 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.dropdown-menu.active {
+    display: block !important;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 12px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #ccff00; 
+    color: #000;
+}
+
+.user-details strong {
+    display: block;
+    color: #000;
+    font-size: 14px;
+}
+
+.user-details span {
+    color: #555;
+    font-size: 12px;
+}
+
+.verified-icon {
+    color: #000;
+    margin-left: auto;
+    font-size: 14px;
+}
+
+.menu-item {
+    color: #000 !important;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 15px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu-item i {
+    width: 20px;
+    text-align: center;
+    color: #444;
+}
+
+.arrow-icon {
+    margin-left: auto;
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.logout-red {
+    color: #ff4d4d !important;
+    font-weight: 500;
+}
+
+.logout-red i {
+    color: #ff4d4d !important; 
+    opacity: 1;
+}
+
+.logout-red:hover {
+    background-color: rgba(255, 77, 77, 0.1) !important;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+}
+
+/* ============================================================
+   2. POPULAR PAGE & ANIME CARD OVERLAY LOGIC
+   ============================================================ */
+
+.popular-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+    border-left: 5px solid #f26b3a;
+    padding-left: 15px;
+    color: white;
+}
+
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* Updated Card Design to match Jujutsu Kaisen Reference */
+
+
+.popular-grid .anime-card:hover {
+    transform: translateY(-10px);
+    border-color: #f26b3a;
+}
+
+.popular-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    
+    /* Adds extra sharpness during scaling */
+    image-rendering: -webkit-optimize-contrast; 
+    image-rendering: crisp-edges;
+    
+    /* Helps with jagged edges on Chrome/Safari */
+    transform: translateZ(0); 
+    backface-visibility: hidden;
+}
+/* The Gradient Overlay at the bottom of the image */
+.card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 15px;
+    text-align: left; /* Left aligned text like image */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+    pointer-events: none; /* Allows clicks to pass through to the card */
+}
+
+.popular-grid .card-info h3 {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Helps text pop */
+}
+
+.popular-grid .card-info p {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: normal;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+.popular-grid .anime-card {
+    will-change: transform;
+    /* ... your other code ... */
+}

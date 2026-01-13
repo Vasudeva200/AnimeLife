@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist - AnimeLife</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="wishlist.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo"><img src="images/logo.jpg" alt="Logo"></div>
+            <span class="brand-name"><span class="highlight">AnimeLife</span></span>
+        </div>
+<ul class="nav-links">
+    <li><a href="main.html">Home</a></li>
+    
+    <li><a href="popular.html">Popular</a></li> 
+    <li><a href="wishlist.html">Wishlist</a></li>
+    <li><a href="favorite.html">Favorite</a></li>
+    
+    <li><a href="main.html#share-target">Contact Us</a></li>
+</ul>
+
+        <div class="nav-right">
+            <div class="dropdown-container">
+                <a href="javascript:void(0)" class="sign-in-btn" id="accountBtn">
+                    <i class="fas fa-user-circle"></i> Account
+                </a>
+
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <div class="user-info">
+                        <div class="user-avatar" style="background-color: #ccff00; color: #000;">AL</div>
+                        <div class="user-details">
+                            <strong>AnimeLife</strong>
+                            <span>@animelife.design</span>
+                        </div>
+                        <i class="fas fa-check-circle verified-icon"></i>
+                    </div>
+                    <hr>
+                    <a href="#" class="menu-item"><i class="fas fa-adjust"></i> Theme <i class="fas fa-chevron-right arrow-icon"></i></a>
+                    <a href="#" class="menu-item"><i class="fas fa-cog"></i> Settings</a>
+                    <hr>
+                    <a href="#" class="menu-item"><i class="fas fa-globe"></i> Community profile</a>
+                    <hr>
+                    <a href="#" class="menu-item"><i class="fas fa-plus"></i> Add account</a>
+                    <a href="#" class="menu-item"><i class="fas fa-users-cog"></i> Manage accounts</a>
+                    <a href="index.html" class="menu-item logout logout-red">
+                        <i class="fas fa-sign-out-alt"></i> Log out
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="wishlist-container">
+        <h1 class="page-title">My <span class="highlight">Wishlist</span></h1>
+        
+        <div class="wishlist-grid">
+            <div class="empty-wishlist">
+                <i class="fas fa-heart-broken"></i>
+                <p>Your wishlist is currently empty.</p>
+                <a href="popular.html" class="explore-btn">Explore Popular Anime</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
